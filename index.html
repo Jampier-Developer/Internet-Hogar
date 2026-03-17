@@ -6,9 +6,10 @@
 <head>
   <meta charset="UTF-8" />
   <title>Internet Xyndy - 2.5 G</title>
-  <link rel="shortcut icon" href="img/QR-Internet Xyndy - 2.5 G.png" type="image/x-icon">
+  <link rel="shortcut icon" href="img/internet  xyndy.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/Internet Xyndy - 2.5 G.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="bg-orbs"></div>
@@ -18,7 +19,6 @@
     <nav class="nav">
       <a href="#inicio" class="nav-link">Inicio</a>
       <a href="#como" class="nav-link">Cómo funciona</a>
-      <a href="#contacto" class="nav-link btn-nav">Contacto</a>
     </nav>
   </header>
 
@@ -34,30 +34,30 @@
 
         <div class="hero-actions">
           <button class="btn primary-btn" id="btn-pulso">
-            Escanear ahora
+            <i class="fas fa-camera"></i> Escanear ahora
           </button>
           <button class="btn ghost-btn" id="btn-scroll">
-            Ver más
+            <i class="fas fa-arrow-down"></i> Ver más
           </button>
         </div>
 
         <div class="hero-note">
-          Funciona en la mayoría de teléfonos modernos con cámara y lector de QR.
+          <i class="fas fa-info-circle"></i> Funciona en la mayoría de teléfonos modernos con cámara y lector de QR.
         </div>
       </div>
 
       <div class="hero-card">
         <div class="card-glow"></div>
         <div class="qr-wrapper">
-          <img src="img/QR-Internet Xyndy - 2.5 G.png" alt="Código QR Internet Xyndy" class="qr-image" id="qr-image" />
+          <img src="img/QR-xyndy.png" alt="Código QR Internet Xyndy" class="qr-image" id="qr-image" />
         </div>
         <div class="card-info">
-          <h2>Red: Internet Xyndy 2.5G</h2>
+          <h2><i class="fas fa-wifi"></i> Red: Internet Xyndy 2.5G</h2>
           <p>Escanea este código para conectarte de forma automática.</p>
           <ul class="card-list">
-            <li>Sin escribir contraseña.</li>
-            <li>Conexión rápida y segura.</li>
-            <li>Ideal para invitados.</li>
+            <li><i class="fas fa-check-circle"></i> Sin escribir contraseña</li>
+            <li><i class="fas fa-bolt"></i> Conexión rápida y segura</li>
+            <li><i class="fas fa-users"></i> Ideal para invitados</li>
           </ul>
         </div>
       </div>
@@ -71,61 +71,64 @@
 
       <div class="feature-grid">
         <div class="feature-card">
-          <span class="feature-icon">📶</span>
+          <span class="feature-icon">📱</span>
           <h3>1. Abre la cámara</h3>
           <p>En muchos dispositivos basta con abrir la cámara y apuntar al código QR.</p>
         </div>
         <div class="feature-card">
-          <span class="feature-icon">📲</span>
+          <span class="feature-icon">📸</span>
           <h3>2. Escanea el QR</h3>
           <p>El teléfono detecta el código y muestra la opción para unirse a la red.</p>
         </div>
         <div class="feature-card">
           <span class="feature-icon">⚡</span>
           <h3>3. Conexión instantánea</h3>
-          <p>Toca “Conectarse” y accede a internet sin contraseña manual.</p>
+          <p>Toca "Conectarse" y accede a internet sin contraseña manual.</p>
         </div>
       </div>
-    </section>
-
-    <section id="contacto" class="section contact">
-      <h2>¿Quieres un diseño como este?</h2>
-      <p class="section-subtitle">
-        Deja tus datos y personaliza tu propia página de Wi‑Fi con tu logo y colores.
-      </p>
-
-      <form class="contact-form" id="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" placeholder="Tu nombre" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Correo</label>
-            <input id="email" type="email" placeholder="tucorreo@ejemplo.com" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" rows="4" placeholder="Cuéntame qué tipo de página quieres"></textarea>
-        </div>
-        <button type="submit" class="btn primary-btn full-width">
-          Enviar mensaje
-        </button>
-        <p class="form-status" id="form-status"></p>
-      </form>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Hecho con ❤ en HTML, CSS y JavaScript puro.</p>
+    <p>Hecho con <i class="fas fa-heart" style="color: #ff4e50;"></i> en HTML, CSS y JavaScript puro.</p>
   </footer>
 
-  <!-- Modal para el QR -->
+  <!-- Modal MEJORADO para el QR -->
   <div class="modal" id="modal-qr" aria-hidden="true">
+    <div class="modal-overlay" id="modal-overlay"></div>
     <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" id="modal-close" aria-label="Cerrar modal">&times;</button>
-      <img src="img/QR-Internet Xyndy - 2.5 G.png" alt="Código QR Internet Xyndy ampliado" class="modal-qr-image" />
+      
+      <!-- Botón de cierre (X roja) -->
+      <button class="modal-close" id="modal-close" aria-label="Cerrar modal">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <!-- Contenedor de la imagen con zoom -->
+      <div class="modal-image-container">
+        <img src="img/QR-xyndy.png" alt="Código QR Internet Xyndy ampliado" class="modal-qr-image" id="modal-qr-image" />
+      </div>
+      
+      <!-- Controles del modal -->
+      <div class="modal-controls">
+        <button class="modal-control-btn" id="zoom-out" title="Alejar">
+          <i class="fas fa-search-minus"></i>
+        </button>
+        <span class="zoom-level" id="zoom-level">100%</span>
+        <button class="modal-control-btn" id="zoom-in" title="Acercar">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <button class="modal-control-btn" id="reset-zoom" title="Resetear zoom">
+          <i class="fas fa-undo"></i>
+        </button>
+        <button class="modal-control-btn" id="download-qr" title="Descargar QR">
+          <i class="fas fa-download"></i>
+        </button>
+      </div>
+      
+      <!-- Texto instructivo -->
+      <p class="modal-instructions">
+        <i class="fas fa-info-circle"></i> Usa la rueda del mouse para hacer zoom | Doble clic para resetear
+      </p>
     </div>
   </div>
 
